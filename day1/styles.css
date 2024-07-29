@@ -65,3 +65,12 @@ body{
     line-height: 1.6;
 }
 
+.answer .show{
+    max-height: 1000px;
+    padding: 20px;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
