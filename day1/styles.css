@@ -16,3 +16,24 @@ body{
     border-radius: 8px;
     overflow: hidden;
 }
+.faq-container h1{
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+.faq-contain{
+    border-bottom: 1px solid #eee;
+}
+.faq-contain:last-child{
+    border-bottom: none;
+}
+
+.question{
+    padding: 20px;
+    cursor: pointer;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition:  background 0.3s ease;
+}
