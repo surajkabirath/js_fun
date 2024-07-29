@@ -1,5 +1,5 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
@@ -8,7 +8,8 @@ body{
     align-items: center;
     height: 100vh;
 }
-.faq-container{
+
+.faq-container {
     width: 80%;
     max-width: 800px;
     background: #fff;
@@ -16,60 +17,67 @@ body{
     border-radius: 8px;
     overflow: hidden;
 }
-.faq-container h1{
+
+.faq-container h1 {
     text-align: center;
     margin: 20px 0;
     color: #333;
 }
-.faq-contain{
+
+.faq-contain {
     border-bottom: 1px solid #eee;
 }
-.faq-contain:last-child{
+
+.faq-contain:last-child {
     border-bottom: none;
 }
 
-.question{
+.question {
     padding: 20px;
     cursor: pointer;
     background: #f7f7f7;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition:  background 0.3s ease;
+    transition: background 0.3s ease;
 }
-.question:hover{
+
+.question:hover {
     background: #f0f0f0;
 }
-.question h2{
+
+.question h2 {
     margin: 0;
     font-size: 18px;
     color: #333;
 }
 
-.button{
+.button {
     font-size: 24px;
     color: #888;
     transition: transform 0.3s ease;
 }
 
-.answer{
+.answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
     background: #fff;
 }
-.answer p{
+
+.answer p {
     margin: 0;
     padding: 0 20px;
     color: #555;
     line-height: 1.6;
 }
 
-.answer .show{
-    max-height: 1000px;
+.answer.show {
+    max-height: 500px; /* Adjust as necessary for content height */
     padding: 20px;
 }
-.icon{
+
+.icon {
     width: 24px;
     height: 24px;
     transition: transform 0.3s ease;
