@@ -1,7 +1,6 @@
-const descriptionElement = document.querySelector(".product-description");
-const maxLength = 84;
-
-if (descriptionElement.textContent.length > maxLength) {
-  descriptionElement.textContent =
-    descriptionElement.textContent.slice(0, maxLength) + "...";
+const descriptionContains = document.querySelector(".product-description");
+const maxDescriptionLength = 83;
+if (descriptionContains.textContent.length > maxDescriptionLength) {
+  descriptionContains.textContent =
+    descriptionContains.textContent.slice(0, maxDescriptionLength) + "...";
 }
