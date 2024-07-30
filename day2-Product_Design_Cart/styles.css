@@ -1,73 +1,86 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .product-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    transition: transform 0.3s ease;
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .product-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .product-info {
-    padding: 10px;
-    /* text-align: center; */
+  padding: 10px;
 }
 
 .product-name {
-    font-size: .9em;
-    margin-bottom: 10px;
-    color: #333;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .product-description {
-    font-size: 1em;
-    margin-bottom: 15px;
-    color: #777;
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #777;
 }
-.price-details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.price-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .product-price {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #e67e22;
+  font-size: 1.2em;
+  color: #e67e22;
 }
 
 .details-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .details-button:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
+}
+
+.brand-new-tag {
+  position: absolute;
+  right: 0.5px;
+
+  background-color: #ff4757;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
 }
