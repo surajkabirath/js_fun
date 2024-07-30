@@ -33,7 +33,7 @@ body {
 }
 
 .product-info {
-  padding: 10px;
+  padding: 20px;
 }
 
 .product-name {
@@ -43,7 +43,7 @@ body {
 }
 
 .product-description {
-  font-size: 1em;
+  font-size: .8em;
   margin-bottom: 15px;
   color: #777;
 }
@@ -75,12 +75,12 @@ body {
 
 .brand-new-tag {
   position: absolute;
-  right: 0.5px;
+  right: 0;
 
   background-color: #ff4757;
   color: #fff;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 0 5px 0 5px;
   font-size: 0.8em;
   font-weight: bold;
 }
