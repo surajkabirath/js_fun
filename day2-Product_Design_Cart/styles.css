@@ -32,12 +32,12 @@ body {
 }
 
 .product-info {
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+    /* text-align: center; */
 }
 
 .product-name {
-    font-size: 1em;
+    font-size: .9em;
     margin-bottom: 10px;
     color: #333;
 }
