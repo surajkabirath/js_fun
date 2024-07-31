@@ -35,21 +35,21 @@ body {
 .product-info {
   padding: 10px;
 }
-.product-info h2{
+.product-info h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
   color: #333;
   font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   text-align: center;
 }
-.product-info h3{
+.product-info h3 {
   font-size: 1.2em;
   margin-bottom: 10px;
   text-align: center;
   color: gray;
   font-weight: bold;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .product-name {
   font-size: 0.9em;
@@ -58,7 +58,7 @@ body {
 }
 
 .product-description {
-  font-size: .8em;
+  font-size: 0.8em;
   margin-bottom: 15px;
   color: #777;
   font-weight: 700;
@@ -103,24 +103,24 @@ body {
 
 /* pop pop */
 .modal {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   background-color: #f4f4f4;
-  display: none; 
-  position: fixed; 
+  display: none;
+  position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-  backdrop-filter: blur(5px); 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
@@ -128,18 +128,24 @@ body {
   margin: 5% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
+  width: 80%;
   max-width: 900px;
-  max-height: 90vh; 
+  max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   animation: slide-in 0.5s ease-out;
 }
 
 @keyframes slide-in {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .close {
@@ -168,7 +174,7 @@ body {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-imgs {
@@ -222,7 +228,7 @@ body {
 }
 
 .img-item a img:hover {
-  border: 2px solid #007BFF;
+  border: 2px solid #007bff;
 }
 
 .product-content {
@@ -236,7 +242,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .product-link {
@@ -244,7 +250,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   margin-bottom: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .product-link:hover {
@@ -258,7 +264,7 @@ body {
 }
 
 .product-rating i {
-  color: #FFD700;
+  color: #ffd700;
   margin-right: 5px;
 }
 
@@ -280,7 +286,7 @@ body {
 .new-price {
   font-size: 20px;
   font-weight: bold;
-  color: #007BFF;
+  color: #007bff;
 }
 
 .product-detail {
@@ -297,11 +303,11 @@ body {
 .product-detail h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #007BFF; /* Primary color */
-  border-bottom: 2px solid #007BFF;
+  color: #007bff; /* Primary color */
+  border-bottom: 2px solid #007bff;
   padding-bottom: 5px;
 }
-.product-detail p{
+.product-detail p {
   font-size: 16px;
   line-height: 1.6;
   margin-top: 0;
@@ -352,49 +358,26 @@ body {
 }
 
 .product-details li strong {
-  color: #007BFF; /* Primary color */
+  color: #007bff; /* Primary color */
 }
 
 .product-details li span {
   color: #28a745; /* Secondary color */
 }
 
-
 .purchase-info {
   display: flex;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
 }
 
-.purchase-info input {
-  width: 60px;
-  padding: 5px;
-  margin-right: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
 
-.btn {
-  background-color: #007BFF;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.btn i {
-  margin-left: 5px;
-}
 
 .btn:hover {
   background-color: #0056b3;
 }
 
 
-
-/* Image Zoom */
 .img-zoom {
   cursor: zoom-in;
 }
@@ -404,17 +387,16 @@ body {
   cursor: zoom-out;
 }
 
-
 /* Full-screen overlay */
 .fullscreen-overlay {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1000; 
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
 }
