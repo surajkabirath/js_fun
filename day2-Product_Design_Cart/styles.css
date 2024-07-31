@@ -247,7 +247,9 @@ body {
 .product-rating span {
   margin-left: 5px;
 }
-
+.checked {
+  color: orange;
+}
 .product-price {
   margin-bottom: 20px;
 }
