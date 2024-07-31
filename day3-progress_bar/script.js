@@ -1,34 +1,49 @@
-const progressBar = document.getElementById('progress-bar');
 const steps = document.querySelectorAll('.step');
-const nextBtn = document.getElementById('nextBtn');
+const progressBar = document.getElementById('progress-bar');
 const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
 let currentStep = 1;
 
 nextBtn.addEventListener('click', () => {
-  if (currentStep < steps.length) {
     currentStep++;
+    if (currentStep > steps.length) {
+        currentStep = steps.length;
+    }
+    updateSteps();
     updateProgressBar();
-  }
 });
 
 prevBtn.addEventListener('click', () => {
-  if (currentStep > 1) {
     currentStep--;
+    if (currentStep < 1) {
+        currentStep = 1;
+    }
+    updateSteps();
     updateProgressBar();
-  }
 });
 
-function updateProgressBar() {
-  steps.forEach((step, index) => {
-    if (index < currentStep) {
-      step.classList.add('active');
-    } else {
-      step.classList.remove('active');
-    }
-  });
+function updateSteps() {
+    steps.forEach((step, index) => {
+        if (index < currentStep) {
+            step.classList.add('completed');
+            step.classList.remove('active');
+        } else if (index === currentStep - 1) {
+            step.classList.add('active');
+            step.classList.remove('completed');
+        } else {
+            step.classList.remove('active', 'completed');
+        }
+    });
 
-  const progressPercentage = ((currentStep - 1) / (steps.length - 1)) * 100;
-  progressBar.style.width = progressPercentage + '%';
+    prevBtn.disabled = currentStep === 1;
+    nextBtn.disabled = currentStep === steps.length;
 }
 
+function updateProgressBar() {
+    progressBar.style.width = ((currentStep - 1) / (steps.length - 1)) * 100 + '%';
+}
+
+// Initial setup
+updateSteps();
 updateProgressBar();

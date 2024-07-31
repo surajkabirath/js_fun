@@ -16,6 +16,17 @@ body {
   margin: 50px 0;
 }
 
+.progress-bar-background {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #e0e0e0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
 .progress-bar {
   position: absolute;
   top: 50%;
@@ -25,13 +36,14 @@ body {
   background-color: #4caf50;
   transform: translateY(-50%);
   transition: width 0.3s ease;
+  z-index: 2;
 }
 
 .progress-steps {
   display: flex;
   justify-content: space-between;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .step {
@@ -46,6 +58,7 @@ body {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  z-index: 4;
 }
 
 .step.active,
