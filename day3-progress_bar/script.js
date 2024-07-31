@@ -4,13 +4,14 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
 let currentStep = 1;
-let stepLenght = steps.length
+let stepLenght = steps.length;
 
 nextBtn.addEventListener("click", () => {
   currentStep++;
   if (currentStep > stepLenght) {
-    currentStep =stepLenght;
+    currentStep = stepLenght;
   }
+  console.log(currentStep)
   updateSteps();
   updateProgressBar();
 });
@@ -20,6 +21,7 @@ prevBtn.addEventListener("click", () => {
   if (currentStep < 1) {
     currentStep = 1;
   }
+  console.log(currentStep)
   updateSteps();
   updateProgressBar();
 });
@@ -42,6 +44,5 @@ function updateSteps() {
 }
 
 function updateProgressBar() {
-  progressBar.style.width =
-    ((currentStep - 1) / (stepLenght - 1)) * 100 + "%";
+  progressBar.style.width = ((currentStep - 1) / (stepLenght - 1)) * 100 + "%";
 }
