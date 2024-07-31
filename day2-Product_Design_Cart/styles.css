@@ -382,7 +382,7 @@ body {
   cursor: zoom-out;
 }
 
-/* Full-screen overlay */
+
 .fullscreen-overlay {
   display: none;
   position: fixed;
@@ -396,7 +396,6 @@ body {
   align-items: center;
 }
 
-/* Enlarged image */
 .fullscreen-overlay img {
   max-width: 90%;
   max-height: 90%;
