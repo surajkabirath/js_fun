@@ -162,7 +162,6 @@ body {
   cursor: pointer;
 }
 
-
 .card-wrapper {
   display: flex;
   justify-content: center;
@@ -174,11 +173,11 @@ body {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
- 
 }
 
 .product-imgs {
   display: flex;
+
   flex-direction: column;
   overflow: none;
 }
@@ -281,7 +280,7 @@ body {
 .last-price {
   text-decoration: line-through red 1px;
   color: black;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   padding-bottom: 5px;
 }
 
@@ -289,18 +288,17 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: blue;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .product-detail {
   max-width: 600px;
- 
 }
 
 .product-detail h2 {
   font-size: 24px;
   margin-bottom: 10px;
- font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   border-bottom: 1px solid gray;
   padding-bottom: 5px;
 }
@@ -309,7 +307,7 @@ body {
   line-height: 1.6;
   margin-top: 0;
   color: #555;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .product-details {
@@ -331,7 +329,6 @@ body {
   justify-content: space-between;
   padding: 5px 0;
   border-bottom: 1px solid #ddd;
-  
 }
 
 .product-details li:last-child {
@@ -341,12 +338,13 @@ body {
 .product-details strong {
   font-weight: bold;
   color: #333;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .product-details span {
   color: #555;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .product-details li:nth-child(odd) {
