@@ -2,9 +2,8 @@ const stars = document.querySelectorAll(".fa-star");
 
 stars.forEach((star, index) => {
   star.addEventListener("click", () => {
-    
     highlightedStar(index);
-    console.log("Stars Click")
+    console.log("Stars Click");
   });
 });
 
