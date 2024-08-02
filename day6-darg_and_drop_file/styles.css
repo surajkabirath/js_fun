@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f2f5;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.drop-zone__prompt {
+    font-size: 18px;
+    color: #333;
+}
+
+.drop-zone__input {
+    display: none;
+}
+
+.drop-zone:hover {
+    background-color: #f1f1f1;
+}
+
+.drop-zone--over {
+    background-color: #e2e2e2;
+}
+
+.file-list {
+    margin-top: 20px;
+}
+
+.file-list__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #fafafa;
+}
+
+.file-list__item .file-name {
+    font-size: 16px;
+    color: #333;
+}
+
+.file-list__item .file-size {
+    font-size: 14px;
+    color: #666;
+}
