@@ -1,13 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const stars = document.querySelectorAll('.fa-star');
+const stars = document.querySelectorAll(".fa-star");
 
-    stars.forEach((star) => {
-        star.addEventListener('click', () => {
-            const index = Array.from(stars).indexOf(star);
-
-            stars.forEach((s, i) => {
-                s.classList.toggle('checked', i <= index);
-            });
-        });
-    });
+stars.forEach((star, index) => {
+  star.addEventListener("click", () => {
+    
+    highlightedStar(index);
+    console.log("Stars Click")
+  });
 });
+
+function highlightedStar(index) {
+  stars.forEach((star, i) => {
+    if (i <= index) {
+      star.classList.add("checked");
+    } else {
+      star.classList.remove("checked");
+    }
+  });
+}
