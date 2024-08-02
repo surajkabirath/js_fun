@@ -26,7 +26,16 @@ function highlightedStar(index) {
     }
   });
 }
-
+// function highlightedStar(index) {
+//     for (let i = 0; i < stars.length; i++) {
+//       if (i <= index) {
+//         stars[i].classList.add("checked");
+//       } else {
+//         stars[i].classList.remove("checked");
+//       }
+//     }
+//   }
+  
 function highlightOnHover(index) {
   stars.forEach((star, i) => {
     if (i <= index) {
