@@ -8,10 +8,11 @@ body {
   background-color: azure;
 }
 
-
-.star{
-    
-    font-size: 30px;
-    color: yellowgreen;
+.star {
+  font-size: 30px;
+  color: gray;
 }
 
+.checked:hover {
+  color: yellow;
+}
