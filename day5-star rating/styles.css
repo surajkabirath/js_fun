@@ -18,10 +18,12 @@ body{
     font-size: 40px;
     color: #ccc; 
 }
-.fa-star:hover{
-    color: gold;
-}
+
 
 .fa-star.checked {
     color: gold; 
 }
+
+.fa-star.hovered {
+    color: gold; /* or any color you want for the hover effect */
+  }
