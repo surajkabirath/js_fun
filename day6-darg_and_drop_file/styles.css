@@ -35,6 +35,10 @@ body {
     font-size: 18px;
     color: #333;
 }
+.plus{
+    font-size: 30px;
+    color: #333;
+}
 
 .drop-zone__input {
     display: none;
