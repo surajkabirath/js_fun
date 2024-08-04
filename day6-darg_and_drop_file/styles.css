@@ -73,7 +73,6 @@ body {
     color: #666;
 }
 
-/* Add styles for image preview and PDF icon */
 .file-list__item {
     display: flex;
     align-items: center;
