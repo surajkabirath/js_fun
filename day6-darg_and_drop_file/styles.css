@@ -40,6 +40,11 @@ body {
 .drop-zone__input {
     display: none;
 }
+.plus
+{
+    font-size: 30px;
+    color: #333;
+}
 
 .drop-zone:hover {
     background-color: #f1f1f1;
