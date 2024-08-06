@@ -1,4 +1,3 @@
-
 const dropZone = document.getElementById("drop-zone");
 const fileInput = document.getElementById("file-input");
 const fileList = document.getElementById("file-list");
@@ -10,7 +9,6 @@ dropZone.addEventListener("click", () => {
 fileInput.addEventListener("change", (event) => {
     handleFiles(event.target.files);
 });
-
 
 dropZone.addEventListener("dragover", (event) => {
     event.preventDefault();
@@ -27,7 +25,6 @@ dropZone.addEventListener("drop", (event) => {
     handleFiles(event.dataTransfer.files);
 });
 
-
 function handleFiles(files) {
     for (const file of files) {
         const listItem = document.createElement("div");
@@ -36,18 +33,15 @@ function handleFiles(files) {
         const fileIcon = document.createElement("div");
         fileIcon.classList.add("file-icon");
 
-        
         if (file.type.startsWith("image/")) {
             const img = document.createElement("img");
             img.src = URL.createObjectURL(file);
             fileIcon.appendChild(img);
         } else if (file.type === "application/pdf") {
-         
             const pdfIcon = document.createElement("span");
             pdfIcon.textContent = "📄";
             fileIcon.appendChild(pdfIcon);
         } else {
-       
             const fileIconGeneric = document.createElement("span");
             fileIconGeneric.textContent = "📁";
             fileIcon.appendChild(fileIconGeneric);
@@ -61,13 +55,20 @@ function handleFiles(files) {
         fileSize.classList.add("file-size");
         fileSize.textContent = formatFileSize(file.size);
 
+        const removeButton = document.createElement("button");
+        removeButton.classList.add("remove-button");
+        removeButton.textContent = "Remove";
+        removeButton.addEventListener("click", () => {
+            listItem.remove();
+        });
+
         listItem.appendChild(fileIcon);
         listItem.appendChild(fileName);
         listItem.appendChild(fileSize);
+        listItem.appendChild(removeButton);
         fileList.appendChild(listItem);
     }
 }
-
 
 function formatFileSize(size) {
     if (size >= 1000000) {
