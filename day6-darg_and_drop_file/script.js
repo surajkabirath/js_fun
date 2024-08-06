@@ -79,3 +79,5 @@ function formatFileSize(size) {
         return size + " B";
     }
 }
+
+// console.log("js")
