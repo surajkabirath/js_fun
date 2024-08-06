@@ -57,7 +57,7 @@ function handleFiles(files) {
 
         const removeButton = document.createElement("button");
         removeButton.classList.add("remove-button");
-        removeButton.textContent = "Remove";
+        removeButton.textContent = "X";
         removeButton.addEventListener("click", () => {
             listItem.remove();
         });
