@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .profile-pic-container {
+            position: relative;
+        }
+        .profile-pic-container input[type="file"] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .status-approved {
+            color: #38a169; /* Green color for approved */
+        }
+        .status-pending {
+            color: #a0aec0; /* Gray color for pending */
+        }
+        .status-rejected {
+            color: #e53e3e; /* Red color for rejected */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white shadow-xl rounded-lg p-8 max-w-lg w-full">
+        <h2 class="text-4xl font-extrabold text-center text-indigo-700 mb-8">User Profile</h2>
+        <div class="flex flex-col items-center">
+            <!-- Profile Picture -->
+            <div class="profile-pic-container mb-6 relative">
+                <img id="profilePicture" src="https://via.placeholder.com/150" alt="Profile Picture" class="w-40 h-40 rounded-full border-4 border-indigo-500 object-cover shadow-lg">
+                <input type="file" id="profilePicUpload" accept=".jpg,.jpeg,.png">
+                <button onclick="document.getElementById('profilePicUpload').click();" class="absolute bottom-0 right-0 bg-indigo-600 text-white py-1 px-2 rounded-full text-sm shadow-lg hover:bg-indigo-700">Change</button>
+            </div>
+            <!-- User Details -->
+            <div class="space-y-6 w-full">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-semibold text-gray-700">Full Name:</h3>
+                    <p id="profileFullName" class="text-gray-600"></p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-semibold text-gray-700">Date of Birth:</h3>
+                    <p id="profileDob" class="text-gray-600"></p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-semibold text-gray-700">Address:</h3>
+                    <p id="profileAddress" class="text-gray-600"></p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-semibold text-gray-700">ID Type:</h3>
+                    <p id="profileIdType" class="text-gray-600"></p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-semibold text-gray-700">KYC Status:</h3>
+                    <p id="profileKycStatus" class="text-gray-600"></p>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <button onclick="goBack()" class="bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to update KYC status color
+        function updateKycStatus() {
+            const status = localStorage.getItem('kycStatus') || 'Pending';
+            const statusElement = document.getElementById('profileKycStatus');
+            
+            if (status === 'Approved') {
+                statusElement.textContent = status;
+                statusElement.className = 'status-approved';
+            } else if (status === 'Rejected') {
+                statusElement.textContent = status;
+                statusElement.className = 'status-rejected';
+            } else {
+                statusElement.textContent = status;
+                statusElement.className = 'status-pending';
+            }
+        }
+
+        // Retrieve user data from localStorage
+        document.getElementById('profileFullName').textContent = localStorage.getItem('fullName') || 'Not Available';
+        document.getElementById('profileDob').textContent = localStorage.getItem('dob') || 'Not Available';
+        document.getElementById('profileAddress').textContent = localStorage.getItem('address') || 'Not Available';
+        document.getElementById('profileIdType').textContent = localStorage.getItem('idType') || 'Not Available';
+        updateKycStatus();
+
+        // Handle profile picture upload
+        document.getElementById('profilePicUpload').addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profilePicture').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

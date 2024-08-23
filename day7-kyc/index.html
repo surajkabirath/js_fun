@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KYC Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white shadow-md rounded-lg p-8 max-w-lg w-full">
+      <h2 class="text-2xl font-bold text-center text-indigo-600 mb-6">
+        KYC Form
+      </h2>
+      <form id="kycForm" class="space-y-6">
+        <div class="form-group">
+          <label for="fullName" class="block text-sm font-medium text-gray-700"
+            >Full Name</label
+          >
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="dob" class="block text-sm font-medium text-gray-700"
+            >Date of Birth</label
+          >
+          <input
+            type="date"
+            id="dob"
+            name="dob"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="address" class="block text-sm font-medium text-gray-700"
+            >Address</label
+          >
+          <input
+            type="text"
+            id="address"
+            name="address"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="idType" class="block text-sm font-medium text-gray-700"
+            >Select ID Type</label
+          >
+          <select
+            id="idType"
+            name="idType"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+            required
+          >
+            <option value="" disabled selected>Select your ID Type</option>
+            <option value="passport">Passport</option>
+            <option value="driving_license">Driving License</option>
+            <option value="citizenship">Citizenship</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="idFront" class="block text-sm font-medium text-gray-700"
+            >Upload Front Side of ID Document</label
+          >
+          <input
+            type="file"
+            id="idFront"
+            name="idFront"
+            class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-600 hover:file:bg-indigo-100"
+            accept=".jpg,.jpeg,.png,.pdf"
+            required
+          />
+        </div>
+        <div class="form-group" id="idBackGroup">
+          <label for="idBack" class="block text-sm font-medium text-gray-700"
+            >Upload Back Side of ID Document</label
+          >
+          <input
+            type="file"
+            id="idBack"
+            name="idBack"
+            class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-600 hover:file:bg-indigo-100"
+            accept=".jpg,.jpeg,.png,.pdf"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label
+            for="latestPhoto"
+            class="block text-sm font-medium text-gray-700"
+            >Upload Latest Photo</label
+          >
+          <input
+            type="file"
+            id="latestPhoto"
+            name="latestPhoto"
+            class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-600 hover:file:bg-indigo-100"
+            accept=".jpg,.jpeg,.png"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Submit
+        </button>
+      </form>
+      <div
+        id="successMessage"
+        class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-lg"
+      >
+        KYC Submitted Successfully!
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
