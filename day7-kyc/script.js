@@ -9,6 +9,7 @@ document.getElementById('kycForm').addEventListener('submit', function(e) {
     console.log(fullName)
     console.log(address)
     console.log(idType)
+    console.log(dob)
     
     // Save user data in localStorage
     localStorage.setItem('fullName', fullName);
